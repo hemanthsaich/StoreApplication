@@ -3,6 +3,9 @@
 ## Overview
 The store app is a software solution designed to streamline the online shopping experience for customers. It provides comprehensive functionality to make virtual shopping simpler and more efficient for your business's customers.
 
+![image](https://github.com/user-attachments/assets/0122e4ec-a93b-4bd6-b8c9-94f97cf01d1d)
+
+
 ## Key Features
 - Easy product browsing and purchasing
 - Secure payment processing
@@ -80,11 +83,3 @@ The store app is a software solution designed to streamline the online shopping 
 - CSS
 - JavaScript
 
-## Getting Started
-(Add instructions for setting up and running the application locally)
-
-## Contributing
-(Add guidelines for contributing to the project)
-
-## License
-(Add license information)
