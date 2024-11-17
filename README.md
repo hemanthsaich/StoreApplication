@@ -1,85 +1,147 @@
-# P1-Store-Application
+# Store Application
 
 ## Overview
-The store app is a software solution designed to streamline the online shopping experience for customers. It provides comprehensive functionality to make virtual shopping simpler and more efficient for your business's customers.
+A Spring Boot based store application that provides functionality for users to register, login, and purchase products. The application includes both customer and admin functionalities with secure authentication and session management.
 
-![image](https://github.com/user-attachments/assets/0122e4ec-a93b-4bd6-b8c9-94f97cf01d1d)
+![image](https://github.com/user-attachments/assets/960ce053-496d-413d-b3ff-da3f521322f1)
 
 
-## Key Features
-- Easy product browsing and purchasing
-- Secure payment processing
-- Real-time inventory management
-- User-friendly shopping interface
-- Order tracking and management
+## Features
+- User Authentication (Login/Register)
+- Role-based Access (Customer/Admin)
+- Product Management
+- Cart Functionality
+- Order Processing
+- Admin Dashboard
+- Session Management
 
-## Technical Architecture
-
-### Frontend
-- JSP (JavaServer Pages)
-- HTML5
-- CSS3
-- JavaScript
-
-### Backend
-- Java
-- Spring Framework:
+## Tech Stack
+- **Backend**
+  - Java
   - Spring Boot
-  - Spring Web
-  - Spring Data
-  - Spring Test
-  - Spring Core
+  - Spring MVC
+  - Spring Security
+  - Hibernate/JPA
 
-### Database
-- MySQL
-- Hibernate ORM
+- **Frontend**
+  - JSP
+  - HTML
+  - CSS
+  - JavaScript
 
-## Roles and Responsibilities
+- **Database**
+  - MySQL
 
-### Customer Experience
-- Implemented intuitive product browsing functionality
-- Developed streamlined checkout processes
-- Created user-friendly shopping interfaces
-- Integrated secure payment processing systems
+## Project Structure
+```
+store-application/
+├── src/main/
+│   ├── java/com/project/
+│   │   ├── controller/
+│   │   │   ├── AdminController.java
+│   │   │   ├── CustomerController.java
+│   │   │   ├── LoginController.java
+│   │   │   └── RegisterController.java
+│   │   ├── dao/
+│   │   │   ├── ProductRepo.java
+│   │   │   └── UserRepo.java
+│   │   ├── model/
+│   │   │   ├── Product.java
+│   │   │   └── User.java
+│   │   └── StoreApplication.java
+│   ├── resources/
+│   │   └── application.properties
+│   └── webapp/
+│       └── views/
+│           ├── admin/
+│           ├── customer/
+│           └── login/
+└── pom.xml
+```
 
-### Technical Implementation
-- Built robust backend systems using Java and Spring Boot
-- Designed and developed interactive user interfaces
-- Integrated Hibernate with MySQL for efficient data management
-- Implemented comprehensive testing using Spring Test
+## Key Components
 
-### Data Management
-- Developed secure data storage solutions
-- Managed product inventory systems
-- Maintained customer information databases
-- Tracked order records and history
+### Controllers
+- `LoginController`: Handles user authentication
+- `RegisterController`: Manages new user registration
+- `AdminController`: Admin functionalities for product management
+- `CustomerController`: Customer operations like viewing products and cart management
 
-## Development Highlights
-- Created responsive web interfaces using modern frontend technologies
-- Implemented secure database operations with Hibernate and MySQL
-- Developed comprehensive test suites using Spring Test
-- Ensured stable and efficient application performance
-- Integrated various Spring modules for enhanced functionality
+### Models
+- `User`: User entity with attributes like username, password, role
+- `Product`: Product entity with details like name, price, description
 
-## Environment and Technologies
+### Repositories
+- `UserRepo`: Data access for user operations
+- `ProductRepo`: Data access for product management
 
-### Core Technologies
-- Java
-- Spring Boot
-- JSP
+## Setup Instructions
 
-### Spring Framework Components
-- Spring Web
-- Spring Data
-- Spring Test
-- Spring Core
+### Prerequisites
+- JDK 11+
+- Maven 3.6+
+- MySQL 8.0+
 
-### Database and ORM
-- MySQL
-- Hibernate
+### Database Configuration
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/store_db
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+```
 
-### Frontend Technologies
-- HTML
-- CSS
-- JavaScript
+### Running the Application
+1. Clone the repository
+```bash
+git clone https://github.com/hemanthsaich/StoreApplication.git
+```
 
+2. Build the project
+```bash
+mvn clean install
+```
+
+3. Run the application
+```bash
+mvn spring-boot:run
+```
+
+4. Access the application at `http://localhost:8080`
+
+## Application Flow
+
+### User Authentication
+- Users can register with username and password
+- Role-based authentication (ADMIN/CUSTOMER)
+- Session management for logged-in users
+
+### Admin Features
+- Add/Edit/Delete products
+- View all products
+- Manage inventory
+
+### Customer Features
+- Browse products
+- Add to cart
+- Place orders
+- View order history
+
+## Security
+- Password encryption
+- Session management
+- Role-based access control
+- Form validation
+
+## Future Enhancements
+1. Payment integration
+2. Email notifications
+3. Product categories
+4. Order tracking
+5. User profile management
+
+## Contributing
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create Pull Request
