@@ -32,48 +32,6 @@ A Spring Boot based store application that provides functionality for users to r
 - **Database**
   - MySQL
 
-## Project Structure
-```
-store-application/
-├── src/main/
-│   ├── java/com/project/
-│   │   ├── controller/
-│   │   │   ├── AdminController.java
-│   │   │   ├── CustomerController.java
-│   │   │   ├── LoginController.java
-│   │   │   └── RegisterController.java
-│   │   ├── dao/
-│   │   │   ├── ProductRepo.java
-│   │   │   └── UserRepo.java
-│   │   ├── model/
-│   │   │   ├── Product.java
-│   │   │   └── User.java
-│   │   └── StoreApplication.java
-│   ├── resources/
-│   │   └── application.properties
-│   └── webapp/
-│       └── views/
-│           ├── admin/
-│           ├── customer/
-│           └── login/
-└── pom.xml
-```
-
-## Key Components
-
-### Controllers
-- `LoginController`: Handles user authentication
-- `RegisterController`: Manages new user registration
-- `AdminController`: Admin functionalities for product management
-- `CustomerController`: Customer operations like viewing products and cart management
-
-### Models
-- `User`: User entity with attributes like username, password, role
-- `Product`: Product entity with details like name, price, description
-
-### Repositories
-- `UserRepo`: Data access for user operations
-- `ProductRepo`: Data access for product management
 
 ## Setup Instructions
 
